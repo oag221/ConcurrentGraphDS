@@ -14,6 +14,10 @@
  * last Updated: 31/07/2018
  *
 */
+
+// g++ -std=c++11 main-10-90.cpp lfGraphDS.cpp -lpthread -O3
+
+
 #include"lfGraphDS.cpp"
 
  //ofstream couttt("graphinput.txt");
@@ -133,7 +137,8 @@ void* pthread_call(void* t)
 				G1.ContainsV(v);
         			ops++;		
 		}
-	} 		
+	} 	
+	pthread_exit(NULL);	
 }
 
 int main(int argc, char*argv[])	
